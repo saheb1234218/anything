@@ -1,0 +1,252 @@
+
+.jobList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+
+.mainContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 80vw;
+    margin-top: 200px;
+    
+}
+
+.details{
+    width: 20vw;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.list{
+    width: 55vw;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.detail_box{
+    width: 18vw;
+    min-height: 45vh;
+    border: 1px solid #cecece;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.detail_box_header{
+    height: 60px;
+    width: inherit;
+    background: #0C222C;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail_box_brief{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.detail_box_brief .detail-brief-jobname{
+    font-weight: bold;
+}
+
+.detail_box_brief .detail_brief_company{
+    font-size: 14px
+}
+
+.detail_brief_company{
+    margin-bottom: 20px;
+}
+
+.detail_box_brief .detail_brief_action{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.detail_box_brief .detail_brief_action div{
+    padding: 10px 15px;
+    border-radius: 100px;
+    margin: 0px 5px;
+    border: 1px solid #0C222C;
+}
+
+.detail_box .detail_box-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    margin: 40px 0px;
+}
+
+.detail_box_info_item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.detail_box_info_item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail_box_info_item div font{
+    font-size: 14px;
+}
+
+
+.detail_box_viewall{
+    padding: 15px 30px;
+    color: #fff;
+    background-color: #0C222C;
+    border-radius: 100px;
+    margin-bottom: 50px;
+}
+
+.detail_box_list input{
+    margin: 6px
+}
+
+
+.detail_list_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    padding: 30px 30px;
+    min-height: 20vh;
+    border: 1px solid #cecece;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.detail_list_item font {
+    margin-bottom: 15px;
+}
+
+
+.detail_list_item .detail_list_item_title {
+    font-size: 24px;
+}
+
+.item_details{
+    height: 15vh;
+    min-width: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.item_pdf{
+    border: none;
+    width: 30vw;
+    height: calc( 30vw * 1.414 );
+}
+
+.item_details div{
+    border: 1px solid #0C222C;
+    border-radius: 100px;
+    padding: 10px 30px;
+}
+
+
+.detail_list_item_content{
+    white-space: pre-line;
+}
+
+.detail_list_item_list{
+    display : flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.applicant_card {
+    border: 1px solid #cecece;
+    width: calc(53vw - 120px) !important;
+}
+
+
+.apply_container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+}
+
+.apply_box{
+    min-height: 400px;
+    min-width: 600px;
+    background-color: #fff;
+    border: 1px solid #cecece;
+    margin: auto auto;
+    box-shadow: 0px 0px 50px #999;
+    padding: 30px;
+}
+@media (max-width:900px) {
+    .applicant_card{
+        width: 100% !important;
+    }
+    .detail_brief_jobname{
+        width: 80%;
+    }
+    .item_pdf{
+        border: none;
+        width: 60vw;
+        height: calc( 60vw * 1.414 );
+    }
+    .mainContainer{
+        flex-direction: column;
+        margin-top: 12.5vh;
+    }
+    .details{
+        width: 80vw;
+        min-height: 20vh;
+    }
+    .detail_box{
+        width: 100%;
+    }
+    .detail_box_brief > img{
+        width: 150px !important;
+        height: 150px !important;
+    }
+    .list,.detail_list_item{
+        width: 100%;
+        
+    }
+    
+    .apply_box{
+        min-height: 400px;
+        min-width: 380px;
+    }
+    
+}

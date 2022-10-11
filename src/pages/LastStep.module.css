@@ -1,0 +1,52 @@
+.LastStep{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.LastStepMain{
+    width: 60vw;
+    height: 600px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 100px;
+    padding: 0px 100px;
+}
+.heading{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.heading > p{
+    color: #445578;
+}
+
+.LastStepResume{
+    color: #263249;
+}
+.LastStepInput{
+    width: 400px;
+    padding: 10px;
+    height: 100px;
+    
+    border: 0.5px solid #d3e1ea;
+    border-radius: 5px;
+}
+.LastStepLocationInput{
+    width: 400px;
+    padding: 10px;
+    height: 50px;
+    
+    border: 0.5px solid black;
+    border-radius: 5px;
+}
+.LastStepButton{
+    column-gap: 5px;
+    display: flex;
+}
+.LastStepButton > button{
+    background-color: white !important; 
+    
+    font-size: 12px;
+    padding: 10px;
+}

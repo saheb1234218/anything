@@ -1,0 +1,11 @@
+#info {
+    position: relative;
+    margin-top: 0px;
+  padding-top: 190px;
+  height: 480px;
+  display: flex;
+  flex: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  }

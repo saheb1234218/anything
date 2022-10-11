@@ -1,0 +1,261 @@
+ .footer{
+     margin-top: 150px;
+     margin-bottom: 50px;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     position: relative;
+     background-color: #e5e8ee;
+ }
+.niyukti>img{
+    width: 150px;
+}
+ .jobLooking{
+     width: 60%;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-between;
+
+ }
+
+ .jobLooking h3{
+     font-size: 32px;
+     font-weight: 500;
+ }
+
+ .jobLooking p{
+     margin-top: 5px;
+ }
+
+ .jobLooking button{
+     border: none;
+     color: white;
+     background-color: #0C222C;
+     padding: 15px 30px;
+     border-radius: 25px;
+     background-image: linear-gradient(to right, #0C222C, #183e51, #0C222C);
+     background-size: 200%;
+     cursor: pointer;
+     transition: .5s;
+ }
+ 
+ .jobLooking button:hover{
+ background-position: right;
+ }
+ 
+.footerMain{
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 50px;
+    /* height: 350px; */
+    padding: 20px;
+}
+.up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+}
+.social{
+    margin-top: 20px;
+    color: #8292B4;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    width: 150px;
+    
+}
+
+.list{
+   display: grid !important;
+   
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   line-height: 30px;
+   /* height: 20px; */
+   color: #273552;
+   margin-left: 40px;
+
+}
+.list1,.list2,.list3,.list4{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px 20px;
+}
+.list1,.list2,.list3,.list4 :hover,.store-app{
+    cursor: pointer;
+}
+.store{
+    border: 1px solid #D3E1EA;
+    width: 340px;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.store > .store-app{
+    margin-top: 30px;
+}
+.down{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    text-align: center;
+    
+}
+.p{
+    font-size: 13px;
+    /* width: 50%; */
+    text-align: start;
+    color: #8292B4;
+}
+.right{
+    display: flex;
+    align-items: center;
+    
+}
+ .footerMainSub ul{
+     flex: 1.75;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     align-items: center;
+     margin-left: 100px;
+ }
+
+ .footerMainSub ul li{
+     font-weight: 500;
+     font-size: 20px;
+ }
+
+ .footerMainSub hr{
+     width: 100%;
+     border: 1px solid #000;
+ }
+
+ .footerMainSub p{
+     font-size: 12px;
+     font-weight: 500;
+ }
+ @media(max-width:770px) {
+    .footer{
+        
+        width: 100vw;
+
+    }
+    .jobLooking{
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+        gap: 15px;
+    }
+    .footerMain{
+        
+        width: 100vw;
+        padding: 5px;
+        
+    }
+    .up{
+        flex-direction: column;
+    }
+    .down{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items:center ;
+        margin-top: 30px;
+        
+    }
+    .left{
+        width: 90%;
+        position: absolute;
+        bottom: -50px;
+        text-align: center ;
+        justify-content: center;
+    }
+    
+    .right{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .businessImage{
+        display: flex;
+        width: 100%;
+        
+    }
+    .businessImage > img{
+        width: 25%;
+    }
+    .logo{
+        width: 100vw;
+        align-self: flex-start;
+        margin-bottom: 50px;
+    }
+    .social{
+        align-self: center;
+        
+    }
+    .list{
+        margin-bottom: 50px;
+        grid-template-columns: 1fr 1fr;
+        width: 90vw !important;
+    }
+    .list1,.list2,.list3,.list4{
+        text-align: start;
+        
+    }
+    .footerMainSub{
+        display: flex;
+        flex-direction: column;
+        width: 98vw;
+    }
+    .footerMainSub > ul{
+        width: 100vw;
+        
+        display: flex;
+        gap: 7px;
+        align-self: flex-end;
+        margin-bottom: 10px;
+    }
+    .footerMainSub ul li{
+        font-size: 16px;
+    }
+    .store{
+        width: 21rem;
+    }
+
+    .p{
+        text-align: center;
+    }
+    
+ }
