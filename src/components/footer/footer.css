@@ -164,6 +164,11 @@
      font-size: 12px;
      font-weight: 500;
  }
+
+ @media (max-width:600px) {
+    
+    
+ }
  @media(max-width:770px) {
     .footer{
         
@@ -194,8 +199,8 @@
     }
     .left{
         width: 90%;
-        position: absolute;
-        bottom: -50px;
+        /* position: absolute;
+        bottom: -50px; */
         text-align: center ;
         justify-content: center;
     }
@@ -206,6 +211,7 @@
         width: 100vw;
         align-items: center;
         justify-content: center;
+        margin-bottom: 20px;
         
     }
     .businessImage{

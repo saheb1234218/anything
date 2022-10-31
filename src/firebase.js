@@ -7,13 +7,23 @@ import "firebase/compat/firestore"
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+// const firebaseConfig = {
+//   apiKey: "AIzaSyCiVXiiFtDoY6mA54ED3R7gQ3MJz30gBX4",
+//   authDomain: "job-portal-7ac8b.firebaseapp.com",
+//   projectId: "job-portal-7ac8b",
+//   storageBucket: "job-portal-7ac8b.appspot.com",
+//   messagingSenderId: "922786686701",
+//   appId: "1:922786686701:web:aa34e3af9fc0b81303cee4"
+// };
+
 const firebaseConfig = {
-  apiKey: "AIzaSyCiVXiiFtDoY6mA54ED3R7gQ3MJz30gBX4",
-  authDomain: "job-portal-7ac8b.firebaseapp.com",
-  projectId: "job-portal-7ac8b",
-  storageBucket: "job-portal-7ac8b.appspot.com",
-  messagingSenderId: "922786686701",
-  appId: "1:922786686701:web:aa34e3af9fc0b81303cee4"
+  apiKey: "AIzaSyBG0lKlbDLMoZPPeC31eOH16tA7hBZHu8o",
+  authDomain: "heyjobs-4fb17.firebaseapp.com",
+  projectId: "heyjobs-4fb17",
+  storageBucket: "heyjobs-4fb17.appspot.com",
+  messagingSenderId: "454585669129",
+  appId: "1:454585669129:web:2f758dfb548af166c3cad8",
+  measurementId: "G-8NTJ1148NE"
 };
 
 // Initialize Firebase

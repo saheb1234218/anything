@@ -4,8 +4,10 @@ import axios from 'axios';
 // eslint-disable-next-line 
 const localhost = "http://localhost:5000/api/"
 // eslint-disable-next-line 
-const live = "https://jobportalblanc.herokuapp.com/api/"
-const domain = localhost
+//const live = "https://jobportalblanc.herokuapp.com/api/"
+const live = "https://relaxed-solomon.157-245-111-92.plesk.page/api/"
+
+const domain = live
 
 
 export async function createUser(obj){
