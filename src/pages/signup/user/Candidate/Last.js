@@ -38,6 +38,10 @@ const submit=async()=>{
     console.log(obj);
     const x=await signup(obj);
   console.log(x.data);
+  if(x.data===undefined)
+  {
+    alert(`${x.error}`)
+  }
   navigate("/dashboard/setting");
 }
 

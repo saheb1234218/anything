@@ -9,3 +9,21 @@
   align-items: center;
   overflow-y: scroll;
   }
+  @media(min-width: 600px)
+  {
+    .form-check-label{
+      margin-left: 80px !important;
+    }
+    
+  }
+  @media(max-width: 500px)
+  {
+    .image{
+      margin-top: 50px !important;
+    }
+    .comp{
+      font-size: 13px !important;
+    }
+    
+  }
+  

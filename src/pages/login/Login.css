@@ -18,18 +18,20 @@
     justify-content: center;
     padding: 0 2rem;
 }
-
-.border {
-    height: 80vh;
-    width: 60vw;
-    padding: 0;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border: 0.5px solid rgb(206, 206, 206);
+@media(min-width: 700px){
+	.border {
+		height: 80vh;
+		
+		padding: 0;
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		border: 0.5px solid rgb(206, 206, 206);
+	}
 }
+
 
 .border .img{
 	flex: 1;
@@ -229,6 +231,12 @@ background-position: right;
 	background-position: right;
 }
 
+@media (max-width:700px) {
+		.border{
+			width: 80vw;
+			
+		}
+}
 
 @media screen and (max-width: 1050px){
 	.signup .container{
