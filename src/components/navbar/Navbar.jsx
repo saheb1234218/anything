@@ -132,11 +132,11 @@ const Header = () => {
                   </a>
                 </li>
                 <li>
-                  <a   style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
+                  {userDetails.type==2?<a   style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
                     
                     <img src="https://th.bing.com/th/id/OIP.HKfjpBnfd_r8oDlMOU59bAHaHa?pid=ImgDet&rs=1" alt="User Profile" style={{width: 30, height: 30, marginLeft: 20, borderRadius: 200}} />
                     {userDetails.coins}
-                  </a>
+                  </a>:null}
                 </li>
               </ul>
             </>

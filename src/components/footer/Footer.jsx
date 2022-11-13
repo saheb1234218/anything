@@ -94,12 +94,12 @@ export default function Footer() {
 
                 <div className="right">
                     <p className="p">Our Businesses</p>
-                    <div className="businessImage">
+                    {/* <div className="businessImage">
                         <img src={jeevansathi} alt="" />
                         <img src={ng} alt="" />
                         <img src={nnacres} alt="" />
                         <img src={firstNaukri} alt="" />
-                    </div>
+                    </div> */}
                     
                 </div>
             </div>

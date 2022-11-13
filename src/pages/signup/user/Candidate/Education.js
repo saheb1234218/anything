@@ -13,7 +13,7 @@ export default function Education(props) {
   const [spez,setSpez]=useState("");
   const [univ,setUniv]=useState("");
   const [ctype,setCtype]=useState("");
-  const [year,setYear]=useState("Choose your passing year");
+  const [year,setYear]=useState("");
 
   const submit=()=>{
     const obj={
@@ -92,7 +92,7 @@ export default function Education(props) {
 
             <div className="mb-3 d-flex flex-column w-75">
                 <label for="formGroupExampleInput" class="label">Passing Year</label>
-              <input  value={year} type="text" class="form-control" id="formGroupExampleInput" disabled  placeholder={year} /> 
+              <input  value={year} onChange={(e)=>setYear(e.target.value)} type="text" class="form-control" id="formGroupExampleInput"   placeholder={year} /> 
                 <div className="d-flex flex-row gap-2 mt-3 ">
                     <a onClick={(e)=>setYear("2020")} className='choose'>2020</a>
                     <a onClick={(e)=>setYear("2021")} className='choose'>2021</a>

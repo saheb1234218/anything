@@ -18,7 +18,7 @@ export default function Work(props) {
 
   const submit=()=>{
     const obj={
-      "yoe": workyear+workmonth,
+      "yoe": workyear,
       "companyName": comp,
       "jobTitle":jobtitle,
       "jobCity": city,
@@ -59,13 +59,14 @@ export default function Work(props) {
               <div className="d-flex flex-row gap-4 mt-2">
                 <select class="form-select w-25" onChange={(e)=>setWorkyear(e.target.value)} aria-label="Default select example">
                   <option selected>Years</option>
-                  <option value="1">1 Year</option>
-                  <option value="2">2 Year</option>
-                  <option value="3">3 Year</option>
-                  <option value="More than 3">More than 3 Years</option>
+                  <option value="1-3">1-3</option>
+                  <option value="3-5">3-5</option>
+                  <option value="5-7">5-7</option>
+                  <option value="7-9">7-9</option>
+                  <option value="9-11">9-11</option>
                 </select>
 
-                <select class="form-select w-25" onChange={(e)=>setWorkmonth(e.target.value)} aria-label="Default select example">
+                {/* <select class="form-select w-25" onChange={(e)=>setWorkmonth(e.target.value)} aria-label="Default select example">
                   <option selected>Months</option>
                   <option value="1">1 Month</option>
                   <option value="2">2 Months</option>
@@ -79,18 +80,18 @@ export default function Work(props) {
                   <option value="10">10 Months</option>
                   <option value="11">11 Months</option>
                   <option value="12">12 Months</option>
-                </select>
+                </select> */}
 
               </div>
             </div>
 
             <div className="mb-3 w-75 mt-4">
-              <label for="formGroupExampleInput" class="label">Previous Company</label>
+              <label for="formGroupExampleInput" class="label">Company Name</label>
               <input onChange={(e)=>setComp(e.target.value)} type="text" class="form-control" id="formGroupExampleInput" placeholder="Eg. Amazon" />
             </div>
 
             <div className="mb-3 w-75 mt-4">
-              <label for="formGroupExampleInput" class="label">Previous Job Title
+              <label for="formGroupExampleInput" class="label">Job Title
               </label>
               <input onChange={(e)=>setJobtitle(e.target.value)} type="text" class="form-control" id="formGroupExampleInput" placeholder="Eg. Software Engineer" />
             </div>

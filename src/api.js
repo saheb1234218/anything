@@ -7,7 +7,7 @@ const localhost = "http://localhost:5000/api/"
 //const live = "https://jobportalblanc.herokuapp.com/api/"
 const live = "https://relaxed-solomon.157-245-111-92.plesk.page/api/"
 
-const domain = live
+const domain = localhost;
 
 
 export async function createUser(obj){

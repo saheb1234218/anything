@@ -115,8 +115,8 @@ export default function Login() {
                 </div>
               </div>
               
-              <a href="/login">Login as employee</a>
-              <a href="/">Forgot Password?</a>
+              {/* <a href="/login">Login as employee</a> */}
+              {/* <a href="/">Forgot Password?</a> */}
               <input type="submit" className="btn" value="Log in" />
               <a href="/signup">Dont Have an Account Sign up!</a>
               {error && <p>{error}</p>}

@@ -169,8 +169,8 @@ export default function UserProfile() {
                                                 )}
                                             </li>
                                             <li style={{ listStyle: "inside" }}>
-                                                {userDetails.city ? (
-                                                    userDetails.city
+                                                {userDetails.jobCity ? (
+                                                    userDetails.jobCity
                                                 ) : (
                                                     <span style={{ color: "#999" }}>Your city</span>
                                                 )}
@@ -249,8 +249,8 @@ export default function UserProfile() {
                                                         Location:
                                                         <p>
                                                             {" "}
-                                                            {userDetails.city ? (
-                                                                userDetails.city
+                                                            {userDetails.jobCity ? (
+                                                                userDetails.jobCity
                                                             ) : (
                                                                 <span style={{ color: "#999" }}>Your city</span>
                                                             )}
@@ -489,9 +489,10 @@ export default function UserProfile() {
                 <div className="welcome">
                     <img src={require("../../assets/new/heyjobs logo.png")} alt="" />
                     <h3>We are eager to welcome you.</h3>
-                    <button onClick={(e) => window.location.reload()}>
+                    {/* <button onClick={(e) => window.location.reload()}>
                         Proceed to Profile Setup
-                    </button>
+                    </button> */}
+                    {window.location.reload()}
                 </div>
             )}
         </>
@@ -600,7 +601,7 @@ function Notification(props) {
 function Setting(props) {
     const { userDetails } = props;
     const [name, setName] = useState(userDetails.name);
-    const [city, setCity] = useState(userDetails.city);
+    const [city, setCity] = useState(userDetails.jobCity);
     const [phone, setPhone] = useState(userDetails.phone);
     const [email, setEmail] = useState(userDetails.email);
     const [website, setWebsite] = useState(userDetails.website);
@@ -623,8 +624,10 @@ function Setting(props) {
     const [certificates, setCertificates] = useState(userDetails.certificates);
     const [addressProof, setAddressProof] = useState(userDetails.addressProof);
     const [releaseLetter, setReleaseLetter] = useState(userDetails.releaseLetter);
-    const [educational, setEducational] = useState(userDetails.educational);
-    const [professional, setProfessional] = useState(userDetails.professional);
+    const [educational, setEducational] = useState(`Course: ${userDetails.Course} \n\n CourseType: ${userDetails.courseType} \n\n YOP: ${userDetails.courseyear} 
+    \n\n University: ${userDetails.university}`);
+    const [professional, setProfessional] = useState(`Company: ${userDetails.companyName} \n\n JobTitle: ${userDetails.jobTitle} \n\n
+    Experience: ${userDetails.experience}\n\n YearsofExp: ${userDetails.yoe} \n\n Salary: ${userDetails.salary}`);
     const [cna, setCna] = useState(userDetails.cna);
     const [skills, setSkills] = useState(userDetails.skills)
 
