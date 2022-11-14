@@ -624,9 +624,9 @@ function Setting(props) {
     const [certificates, setCertificates] = useState(userDetails.certificates);
     const [addressProof, setAddressProof] = useState(userDetails.addressProof);
     const [releaseLetter, setReleaseLetter] = useState(userDetails.releaseLetter);
-    const [educational, setEducational] = useState(`Course: ${userDetails.Course} \n\n CourseType: ${userDetails.courseType} \n\n YOP: ${userDetails.courseyear} 
+    const [educational, setEducational] = useState(userDetails.educational || `Course: ${userDetails.Course} \n\n CourseType: ${userDetails.courseType} \n\n YOP: ${userDetails.courseyear} 
     \n\n University: ${userDetails.university}`);
-    const [professional, setProfessional] = useState(`Company: ${userDetails.companyName} \n\n JobTitle: ${userDetails.jobTitle} \n\n
+    const [professional, setProfessional] = useState(userDetails.professional || `Company: ${userDetails.companyName} \n\n JobTitle: ${userDetails.jobTitle} \n\n
     Experience: ${userDetails.experience}\n\n YearsofExp: ${userDetails.yoe} \n\n Salary: ${userDetails.salary}`);
     const [cna, setCna] = useState(userDetails.cna);
     const [skills, setSkills] = useState(userDetails.skills)
@@ -635,9 +635,8 @@ function Setting(props) {
     const { getUserData } = useAuth();
 
     async function handleSubmit() {
-        console.log(companyDoc, kycDoc);
-        const res = await updateUser(
-            userDetails.uid,
+        console.log(companyDoc, kycDoc,description);
+        const obj={
             name,
             city,
             phone,
@@ -651,9 +650,9 @@ function Setting(props) {
             profileimg,
             latitude,
             longitude,
-            userDetails.resume,
-            companyDoc,
-            kycDoc,
+            resume:userDetails.resume,
+            cdoc:companyDoc,
+            kdoc:kycDoc,
             salarySlip,
             certificates,
             addressProof,
@@ -662,6 +661,11 @@ function Setting(props) {
             professional,
             cna,
             skills
+        }
+        const res = await updateUser(
+            obj,
+            userDetails.uid,
+            
         );
         console.log(res);
         if (res.status === 200) {

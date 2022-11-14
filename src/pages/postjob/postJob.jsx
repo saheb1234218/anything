@@ -268,7 +268,7 @@ function Setting(props) {
                         onChange={(e) => settitle(e.target.value)}
                     />
                 </div>
-                <div className="input-row">
+                {/* <div className="input-row">
                     <font className="input-label">Skills Needed</font>
                     <font>:</font>
                     <select  value={type} onChange={(e) => settype(e.target.value)}>
@@ -279,7 +279,7 @@ function Setting(props) {
                         <option value="Others">Others</option>
                     </select>
                     
-                </div>
+                </div> */}
                 <div className="input-row">
                     <font className="input-label">Category / Field</font>
                     <font>:</font>
@@ -352,7 +352,19 @@ function Setting(props) {
                     />
                 </div>
             </div>
-
+            <div className="settingContainer">
+                <h3>Skills required</h3>
+                <div className="input-row" style={{ justifyContent: 'center', alignItems: 'center' }}>
+                    <textarea
+                        type="text"
+                        placeholder="Describe the skills required"
+                        value={type}
+                        style={{ width: '100%', height: 'auto', borderRadius: 10, marginLeft: 0, padding: 30, marginBottom: 20 }}
+                        rows={15}
+                        onChange={(e) => settype(e.target.value)}
+                    />
+                </div>
+            </div>
             <div className="settingContainer">
                 <h3>Job Responsibities</h3>
                 <div className="input-row" style={{ justifyContent: 'center', alignItems: 'center' }}>
@@ -385,7 +397,7 @@ function Setting(props) {
 
             <button
                 onClick={(e) => {
-                    if(userDetails.coins<200){
+                    if((userDetails.kycDocument==="" &&  userDetails.coins>200) || (userDetails.kycDocument!="" && userDetails.coins<200) || (userDetails.kycDocument==="" && userDetails.coins<200)) {
                         setWord(true);
                     }
                     else{
@@ -396,7 +408,7 @@ function Setting(props) {
             >
                 Post a Job for 200 <img style={{width:'30px' ,height:'30px',borderRadius:'50%'}} src="https://static.vecteezy.com/system/resources/previews/000/545/896/original/money-coin-vector-icon.jpg"></img>
             </button>
-            {word?<small style={{color:'red'}}>Sorry can't post a job! For more coins contact Admin/Support</small>:null}
+            {word?userDetails.kycDocument===""?<small style={{color:'red'}}>Sorry can't post a job! Please upload your Kyc details!</small>:<small style={{color:'red'}}>Sorry can't post a job! For more coins contact Admin/Support</small>:null}
         </div>
     );
 }
