@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import "./common.css";
 
-
+import { storage } from "../../../../firebase";
 
 export default function Basic(props) {
   const [name, setName] = useState("");
@@ -12,17 +12,63 @@ export default function Basic(props) {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
-  const [box,setBox]=useState(false)
+  const [box,setBox]=useState(false);
+  const [resume,setResume]=useState();
+  const [link,setLink]=useState("");
 
-  const submit=()=>{
+  const uploadImage = (image) => {
+   // setUploading(true);
+    //   const storage = getStorage();
+    //   const storageRef = ref(storage, "profile/" + userDetails.uid + "-" + image.name);
+
+    //const uploadTask = uploadBytesResumable(storageRef, image);
+
+    const ts = Date.now();
+    const uploadTask = storage
+        .ref()
+        .child("resume/" + ts + "-" + image.name)
+        .put(image);
+
+    uploadTask.on(
+        "state_changed",
+        (snapshot) => {
+            const prog = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            console.log("Upload is " + prog + "% done");
+           
+           // setProgress(prog);
+        },
+        (error) => {
+            alert(error);
+        },
+        () => {
+            uploadTask.snapshot.ref.getDownloadURL().then(async (downloadURL) => {
+                console.log("File available at", downloadURL);
+                setLink(downloadURL);
+                //await updateUserResume(userDetails.uid, downloadURL);
+                //setUploading(false);
+            });
+        }
+    );
+};
+
+
+  const submit=async()=>{
+    await uploadImage(resume);
+   // console.log(resume)
     const obj={
       "name": name,
       "experience": exp,
       "phone":phone,
       "email": email,
-      "password":pass
+      "password":pass,
+      "resume": link,
+      
     }
+
     localStorage.setItem("basic",JSON.stringify(obj));
+    
+    console.log(obj);
+    
     props.next();
   }
 
@@ -80,6 +126,15 @@ export default function Basic(props) {
         
       </div>
     </div>
+  </div>
+  <div class="mb-3">
+    <label class="label" for="autoSizingInputGroup">Upload Resume</label>
+    <div class="input-group">
+      
+      <input type="file" onChange={(e)=>setResume(e.target.files[0])} class="form-control" id="autoSizingInputGroup" />
+      
+    </div>
+    <small>Upload your latest resume</small>
   </div>
 
   <small>By clicking Register, you agree to the <small style={{color:'#457eff'}}>Terms and Conditions</small> & <small style={{color:'#457eff'}}>Privacy Policy</small> of HeyJobs</small>

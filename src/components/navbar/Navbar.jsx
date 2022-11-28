@@ -9,7 +9,7 @@ import { useAuth } from "../../contexts/AuthContext";
 
 const Header = () => {
   const navigate = useNavigate()
-  const { currentUser, userDetails } = useAuth()
+  const { currentUser, userDetails,logout } = useAuth()
   const [menuOpen, setMenuOpen] = useState(false);
   const [backColor, setBackColor] = useState("rgba(255,255,255,0.0)");
   const [size, setSize] = useState({
@@ -110,11 +110,14 @@ const Header = () => {
                     </a>
                   </li>
                 }
+                {userDetails.type===1 && 
                 <li>
-                  <a href="/joblist" onClick={menuToggleHandler}>
-                    Browse
-                  </a>
-                </li>
+                <a href="/joblist" onClick={menuToggleHandler}>
+                  Browse
+                </a>
+              </li>
+                }
+                
                 <li>
                   <a href="/dashboard/manage" onClick={menuToggleHandler}>
                     Manage
@@ -125,6 +128,7 @@ const Header = () => {
                     Notifications
                   </a>
                 </li>
+                
                 <li>
                   <a href="/dashboard" onClick={menuToggleHandler} style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
                     {userDetails.name}
@@ -137,6 +141,16 @@ const Header = () => {
                     <img src="https://th.bing.com/th/id/OIP.HKfjpBnfd_r8oDlMOU59bAHaHa?pid=ImgDet&rs=1" alt="User Profile" style={{width: 30, height: 30, marginLeft: 20, borderRadius: 200}} />
                     {userDetails.coins}
                   </a>:null}
+                </li>
+                <li>
+                  <a href="/login" onClick={()=>{
+                    menuToggleHandler();
+                    logout();
+                  }
+                    
+                    }>
+                    Logout
+                  </a>
                 </li>
               </ul>
             </>

@@ -22,6 +22,7 @@ const submit=async()=>{
       "experience": basic.experience,
       "phone":basic.phone,
       "email": basic.email,
+      "resume": basic.resume,
       "password":basic.password,
       "yoe": work.yoe,
       "companyName": work.companyName,

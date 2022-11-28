@@ -87,7 +87,7 @@ export default function Footer() {
                 <div className="left">
                     <div className="p">
                         <p>All trademarks are the property of their respective owners.</p>
-                        <p>All rights reserved © 2022 Info Edge (India) Ltd.</p>
+                        {/* <p>All rights reserved © 2022 Info Edge (India) Ltd.</p> */}
                     </div>
                     
                 </div>
